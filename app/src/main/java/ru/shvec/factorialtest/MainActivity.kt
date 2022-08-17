@@ -20,10 +20,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
         observeViewModel()
         binding.buttonCalculate.setOnClickListener {
-            Log.d("MainActivity", "hi")
             viewModel.calculate(binding.editTextNumber.text.toString())
         }
     }
